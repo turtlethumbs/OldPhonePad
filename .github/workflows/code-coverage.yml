@@ -39,3 +39,4 @@ jobs:
         with:
           file: ${{ env.coverage_file }}
           token: ${{ secrets.CODECOV_TOKEN }}
+          slug: turtlethumbs/OldPhonePad
