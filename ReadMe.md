@@ -79,6 +79,18 @@ The input must follow specific rules to pass validation logic within the class m
 3) The input may contain a ' ' (space) between each character as a pause indication to proceed with character selection.
 4) The '*' character may be specified to erase a previously typed character.
 
+#### Example Input / Outputs
+
+| Input | Output |
+|-------|--------|
+| 33#   | E      |
+| 227*# | B      |
+| 4433555 555666# | HELLO |
+| 4433555 555666096667775553# | HELLO WORLD |
+| 62 22212224433 33777733# | MAC&CHEESE |
+| 11184426655111011199966688111# | (THANK) (YOU) |
+| 111*84426655111011199966688111# | THANK( )YOU( |
+
 ### Output
 
 This method's output is in UPPERCASE ASCII text format.
