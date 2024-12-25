@@ -31,4 +31,4 @@ jobs:
       - name: Upload code coverage results
         uses: codecov/codecov-action@v3
         with:
-          file: ./IronSoftware.OldPhonePad.Tests/TestResults/*/coverage.cobertura.xml
+          file: /home/runner/work/OldPhonePad/OldPhonePad/IronSoftware.OldPhonePad.Tests/TestResults/*/coverage.cobertura.xml
