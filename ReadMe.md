@@ -68,7 +68,7 @@ class Program
 
 #### Params
 
-input as a String 
+`input` as a String 
 
 #### Format
 
@@ -81,6 +81,6 @@ The input must follow specific rules to pass validation logic within the class m
 
 ### Output
 
-The method's output is in UPPERCASE ASCII text format, and the final output is given by the function upon processing the '#' character.
+This method's output is in UPPERCASE ASCII text format.
 
 ## Finished.
