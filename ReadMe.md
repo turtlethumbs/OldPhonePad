@@ -10,7 +10,7 @@ and it will transform the data into human readable ASCII text strings.
 ## Quick Start
 
 1. Clone this repo: `git clone https://github.com/turtlethumbs/OldPhonePad.git`
-2. Navigate into the cloned repo and then open 'IronSoftware.OldPhonePad.sln' with MS Visual Studio
+2. Navigate into the cloned repo and then open 'IronSoftware.OldPhonePad.sln' with MS Visual Studio 2022
 3. Expand the IronSoftware.OldPhonePad project folder.
 4. Double-click the Program.cs file to view source code of main program.
 5. Run the solution to view example usage in command line.
