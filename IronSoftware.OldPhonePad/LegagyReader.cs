@@ -11,11 +11,52 @@ namespace IronSoftware.OldPhonePad
             LegacyReader.ValidateInputIsNotEmpty(input);
             LegacyReader.ValidateInputHasLegalCharsOnly(input);
             LegacyReader.ValidateInputHasPoundSymbolAsFinalChar(input);
+            string transformedString = "";
+            Dictionary<char, string> mapping = CreateKeypadMapping();
+            int counter = -1;
+            int maxCount = counter;
+            const char PAUSE_CHAR = ' ';
+            const char ERASE_CHAR = '*';
+            char nextChar = input[0];
+            char prevChar = nextChar;
             foreach (char c in input)
             {
-                Console.WriteLine("test");
+                nextChar = c;
+                if (nextChar != prevChar)
+                {
+                    counter = 0;
+                    transformedString += (prevChar != PAUSE_CHAR && prevChar != ERASE_CHAR) ? mapping[prevChar][maxCount] : "";
+                    maxCount = counter;
+                    if (nextChar == PAUSE_CHAR)
+                    {
+                        prevChar = nextChar;
+                        continue;
+                    }
+                    if (nextChar == '#') break;
+                } else {
+                    maxCount = ++counter;
+                }
+                if (nextChar == ERASE_CHAR && transformedString.Length > 0)
+                    transformedString = transformedString.Substring(0, transformedString.Length - 1);
+                prevChar = nextChar;
             }
-            return "";
+            return transformedString;
+        }
+
+        private static Dictionary<char, string> CreateKeypadMapping()
+        {
+            Dictionary<char, string> mapping = new Dictionary<char, string>();
+            mapping.Add('1', "&'(");
+            mapping.Add('2', "ABC");
+            mapping.Add('3', "DEF");
+            mapping.Add('4', "GHI");
+            mapping.Add('5', "JKL");
+            mapping.Add('6', "MNO");
+            mapping.Add('7', "PQRS");
+            mapping.Add('8', "TUV");
+            mapping.Add('9', "WXYZ");
+            mapping.Add('0', " ");
+            return mapping;
         }
 
         private static void ValidateInputIsNotEmpty(string input)

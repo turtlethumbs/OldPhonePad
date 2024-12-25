@@ -7,21 +7,21 @@ namespace IronSoftware.OldPhonePad.Tests
     public class OldPhonePadTests
     {
         [Fact]
-        public void LegacyReader_OldPhonePad_ReturnValidOutput()
+        public void LegacyReader_OldPhonePad_ReturnValidOutputs()
         {
             List<string> inputList = new List<string>()
             {
                 "33#", // E
                 "227*#", // B
                 "4433555 555666#", // HELLO
-                "8 88777444666*664#" // TBD???
+                "8 88777444666*664#" // TURING
             };
             List<string> expectResult = new List<string>()
             {
                 "E",
                 "B",
                 "HELLO",
-                "TBD???"
+                "TURING"
             };
             List<string> actualResult = new List<string>();
 
