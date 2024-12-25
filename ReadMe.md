@@ -68,7 +68,7 @@ Accepts a single input param as a pre-formatted old phone pad data string.
 
 ### Input Params
 
-`input` as a String 
+`input` as a String
 
 ### Output
 
@@ -82,6 +82,7 @@ The input must follow specific rules to pass validation logic within the class m
 2) The input must always be terminated with a '#' character that only appears once.
 3) The input may contain a ' ' (space) between each character as a pause indication to proceed with the previously typed character selection. 
 4) The '*' character may be specified to erase a previously typed character selection.
+5) A single '#' character must appear at the end of each input data string.
 
 ### Mapping
 
