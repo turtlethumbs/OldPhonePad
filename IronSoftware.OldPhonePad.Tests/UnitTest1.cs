@@ -9,33 +9,24 @@ namespace IronSoftware.OldPhonePad.Tests
         [Fact]
         public void LegacyReader_OldPhonePad_ReturnValidOutput()
         {
-            List<string> inputList = new List<string>()
-            {
-                "33#", // E
-                "227*#", // B
-                "4433555 555666#", // HELLO
-                "4433555 555666096667775553#", // HELLO WORLD
-                "8 88777444666*664#", // TURING
-                "62 22212224433 33777733#", // MAC&CHEESE
-                "1177778277711#", // 'STAR'
-                "11184426655111011199966688111#", // (THANK) (YOU)
-                "111*84426655111011199966688111#" // THANK( )YOU(
-            };
-            List<string> expectResult = new List<string>()
-            {
-                "E",
-                "B",
-                "HELLO",
-                "HELLO WORLD",
-                "TURING",
-                "MAC&CHEESE",
-                "'STAR'",
-                "(THANK) (YOU)",
-                "THANK( )YOU("
-            };
+            Dictionary<string, string> testCases = new Dictionary<string, string>();
+            testCases.Add("33#", "E");
+            testCases.Add("227*#", "B");
+            testCases.Add("4433555 555666#", "HELLO");
+            testCases.Add("4433555 555666096667775553#", "HELLO WORLD");
+            testCases.Add("8 88777444666*664#", "TURING");
+            testCases.Add("62 22212224433 33777733#", "MAC&CHEESE");
+            testCases.Add("1177778277711#", "'STAR'");
+            testCases.Add("11*77778277711#", "STAR'");
+            testCases.Add("11184426655111011199966688111#", "(THANK) (YOU)");
+            testCases.Add("111*84426655111011199966688111#", "THANK( )YOU(");
+            testCases.Add("***#", "");
+            testCases.Add("62 2221*0*2224433 33777733*#", "MACCHEES");
+            List<string> expectResult = new List<string>();
+            foreach (var input in testCases) expectResult.Add(input.Value);
             List<string> actualResult = new List<string>();
 
-            foreach (string input in inputList) actualResult.Add(LegacyReader.OldPhonePad(input));
+            foreach (var input in testCases) actualResult.Add(LegacyReader.OldPhonePad(input.Key));
 
             Assert.Equal(expectResult, actualResult);
         }
