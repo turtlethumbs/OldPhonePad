@@ -11,7 +11,6 @@ namespace IronSoftware.OldPhonePad
             LegacyReader.ValidateInputIsNotEmpty(input);
             LegacyReader.ValidateInputHasLegalCharsOnly(input);
             LegacyReader.ValidateInputHasPoundSymbolAsFinalChar(input);
-            string transformedString = "";
             Dictionary<char, string> mapping = CreateKeypadMapping();
             int counter = -1;
             int maxCount = counter;
@@ -19,6 +18,7 @@ namespace IronSoftware.OldPhonePad
             const char ERASE_CHAR = '*';
             char nextChar = input[0];
             char prevChar = nextChar;
+            string transformedString = "";
             foreach (char c in input)
             {
                 nextChar = c;
