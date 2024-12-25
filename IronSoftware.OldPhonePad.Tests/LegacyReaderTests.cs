@@ -21,6 +21,7 @@ namespace IronSoftware.OldPhonePad.Tests
             testCases.Add("11184426655111011199966688111#", "(THANK) (YOU)");
             testCases.Add("111*84426655111011199966688111#", "THANK( )YOU(");
             testCases.Add("***#", "");
+            testCases.Add("#", "");
             testCases.Add("62 2221*0*2224433 33777733*#", "MACCHEES");
             List<string> expectResult = new List<string>();
             foreach (var input in testCases) expectResult.Add(input.Value);
