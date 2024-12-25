@@ -1,12 +1,20 @@
 ﻿using IronSoftware.OldPhonePad;
 
-try
+class Program
 {
-    string exampleInput = "11184426655111011199966688111#";
-    string output = LegacyReader.OldPhonePad(exampleInput);
-    Console.WriteLine(output);
+    static void Main(string[] args)
+    {
+        try
+        {
+            string exampleInput = "8 88777444666*664#";
+            string output = LegacyReader.OldPhonePad(exampleInput);
+            Console.WriteLine(output);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
 }
-catch (Exception ex)
-{
-    Console.WriteLine(ex.Message);
-}
+
+
