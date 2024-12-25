@@ -94,7 +94,6 @@ Each number on the keypad of an old phone pad may be pressed X number of times t
 7) `P - Q - R - S`
 8) `T - U - V`
 9) `W - X - Y - Z`
-0) ` `
 
 **Note:** ' ' (space) characters in the input data are treated as 1 second pauses that confirm the user's most recent previous selection.
 
