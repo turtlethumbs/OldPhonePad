@@ -51,5 +51,38 @@ namespace IronSoftware.OldPhonePad.Tests
 
             Assert.Equal(expectResult, exception.Message);
         }
+
+        [Fact]
+        public void LegacyReader_OldPhonePad_ReturnExceptionDueToMultiplePoundSymbols()
+        {
+            string input = " 1234567890*#1#";
+            string expectResult = "Input cannot be processed due to existence of multiple '#' symbol chars (Parameter 'input')";
+
+            var exception = Assert.Throws<ArgumentException>(() => LegacyReader.OldPhonePad(input));
+
+            Assert.Equal(expectResult, exception.Message);
+        }
+
+        [Fact]
+        public void LegacyReader_OldPhonePad_ReturnExceptionDueToPoundSymbolCharNotFound()
+        {
+            string input = " 1234567890*";
+            string expectResult = "Input cannot be processed due to '#' symbol char not found (Parameter 'input')";
+
+            var exception = Assert.Throws<ArgumentException>(() => LegacyReader.OldPhonePad(input));
+
+            Assert.Equal(expectResult, exception.Message);
+        }
+
+        [Fact]
+        public void LegacyReader_OldPhonePad_ReturnExceptionDueToMissingTrailingPoundSymbol()
+        {
+            string input = " 1234567890*#1";
+            string expectResult = "Input cannot be processed due to '#' symbol char not properly placed at end of input (Parameter 'input')";
+
+            var exception = Assert.Throws<ArgumentException>(() => LegacyReader.OldPhonePad(input));
+
+            Assert.Equal(expectResult, exception.Message);
+        }
     }
 }
