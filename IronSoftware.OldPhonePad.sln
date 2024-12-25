@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronSoftware.OldPhonePad", "IronSoftware.OldPhonePad\IronSoftware.OldPhonePad.csproj", "{4902D8B9-7C30-4F2E-85B0-8C0559EB767F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronSoftware.OldPhonePad.Tests", "IronSoftware.OldPhonePad.Tests\IronSoftware.OldPhonePad.Tests.csproj", "{F9E75847-0ABE-49FC-A013-A4EC5697B270}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4902D8B9-7C30-4F2E-85B0-8C0559EB767F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4902D8B9-7C30-4F2E-85B0-8C0559EB767F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4902D8B9-7C30-4F2E-85B0-8C0559EB767F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4902D8B9-7C30-4F2E-85B0-8C0559EB767F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E75847-0ABE-49FC-A013-A4EC5697B270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E75847-0ABE-49FC-A013-A4EC5697B270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E75847-0ABE-49FC-A013-A4EC5697B270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E75847-0ABE-49FC-A013-A4EC5697B270}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D200A68-A3EF-406C-87E2-467DE40164BE}
+	EndGlobalSection
+EndGlobal
