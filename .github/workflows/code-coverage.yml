@@ -38,3 +38,4 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           file: ${{ env.coverage_file }}
+          token: ${{ secrets.CODECOV_TOKEN }}
