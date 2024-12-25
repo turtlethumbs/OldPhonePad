@@ -14,6 +14,8 @@ This Old Phone Pad Prototype processes pre-formatted data strings from Old Phone
 
 .NET 8.0 or higher (MS Visual Studio 2022)
 
+[Download MS Visual Studio](https://visualstudio.microsoft.com/downloads/)
+
 ## Quick Start
 
 1. Clone this repo: `git clone https://github.com/turtlethumbs/OldPhonePad.git`
