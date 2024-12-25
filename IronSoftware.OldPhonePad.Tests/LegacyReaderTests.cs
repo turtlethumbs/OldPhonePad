@@ -4,7 +4,7 @@ using Xunit;
 
 namespace IronSoftware.OldPhonePad.Tests
 {
-    public class OldPhonePadTests
+    public class LegacyReaderTests
     {
         [Fact]
         public void LegacyReader_OldPhonePad_ReturnValidOutput()
