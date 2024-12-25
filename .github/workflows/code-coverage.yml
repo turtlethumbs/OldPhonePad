@@ -39,7 +39,6 @@ jobs:
           dotnet tool install --global dotnet-reportgenerator-globaltool
           export PATH="$PATH:/root/.dotnet/tools"
 
-      - name: Generate code coverage report
+      - name: Generate code coverage HTML report
         run: |
-          reportgenerator "-reports:${{ env.coverage_file }}" "-targetdir:./CodeCoverageReport" -reporttypes:TextSummary
-          cat ./CodeCoverageReport/Summary.txt
+          reportgenerator "-reports:${{ env.coverage_file }}" "-targetdir:./CodeCoverageReport" -reporttypes:Html
