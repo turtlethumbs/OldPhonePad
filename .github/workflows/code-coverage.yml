@@ -28,11 +28,13 @@ jobs:
         run: |
           dotnet test --collect:"XPlat Code Coverage"  
 
-      - name: List files
+      - name: Find coverage file
+        id: find-coverage
         run: |
-          ls -R ./IronSoftware.OldPhonePad.Tests/TestResults/
+          COVERAGE_FILE=$(find ./IronSoftware.OldPhonePad.Tests/TestResults/ -name "coverage.cobertura.xml" -print -quit)
+          echo "coverage_file=$COVERAGE_FILE" >> $GITHUB_ENV
 
       - name: Upload code coverage results
         uses: codecov/codecov-action@v3
         with:
-          file: ./IronSoftware.OldPhonePad.Tests/TestResults/**/coverage.cobertura.xml
+          file: ${{ env.coverage_file }}
