@@ -7,21 +7,27 @@ namespace IronSoftware.OldPhonePad.Tests
     public class OldPhonePadTests
     {
         [Fact]
-        public void LegacyReader_OldPhonePad_ReturnValidOutputs()
+        public void LegacyReader_OldPhonePad_ReturnValidOutput()
         {
             List<string> inputList = new List<string>()
             {
                 "33#", // E
                 "227*#", // B
                 "4433555 555666#", // HELLO
-                "8 88777444666*664#" // TURING
+                "4433555 555666096667775553#", // HELLO WORLD
+                "8 88777444666*664#", // TURING
+                "62 22212224433 33777733#", // MAC&CHEESE
+                "1177778277711#" // 'STAR'
             };
             List<string> expectResult = new List<string>()
             {
                 "E",
                 "B",
                 "HELLO",
-                "TURING"
+                "HELLO WORLD",
+                "TURING",
+                "MAC&CHEESE",
+                "'STAR'"
             };
             List<string> actualResult = new List<string>();
 

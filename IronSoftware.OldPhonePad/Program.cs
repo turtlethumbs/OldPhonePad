@@ -2,7 +2,7 @@
 
 try
 {
-    string output = LegacyReader.OldPhonePad("8 88777444666*664#");
+    string output = LegacyReader.OldPhonePad("4433555 555666096667775553#");
     Console.WriteLine(output);
 }
 catch (Exception ex)
