@@ -31,6 +31,8 @@ This Old Phone Pad Prototype processes pre-formatted data strings from Old Phone
 
 ## Usage
 
+Make a new source code program file, and then use the IronSoftware.OldPhonePad namespace. Simply provide valid Old Phone Pad data input to the static public method LegacyReader.OldPhonePad exposed by the LegacyReader class file. Returned output is in string format.
+
 ```csharp
 using IronSoftware.OldPhonePad;
 
