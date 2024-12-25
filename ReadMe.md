@@ -62,6 +62,8 @@ class Program
 
 ## Method - OldPhonePad
 
+Accepts a single input param as a pre-formatted old phone pad data string.
+
 `string LegacyReader.OldPhonePad(string input)`
 
 ### Input Params
