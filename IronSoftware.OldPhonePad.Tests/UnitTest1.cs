@@ -33,9 +33,10 @@ namespace IronSoftware.OldPhonePad.Tests
         [Fact]
         public void LegacyReader_OldPhonePad_ReturnExceptionDueToEmptyInput()
         {
+            string input = ""; // empty input
             string expectResult = "Input cannot be empty (Parameter 'input')";
 
-            var exception = Assert.Throws<ArgumentException>(() => LegacyReader.OldPhonePad(""));
+            var exception = Assert.Throws<ArgumentException>(() => LegacyReader.OldPhonePad(input));
 
             Assert.Equal(expectResult, exception.Message);
         }
