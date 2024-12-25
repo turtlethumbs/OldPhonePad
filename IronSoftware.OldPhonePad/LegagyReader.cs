@@ -42,11 +42,11 @@ namespace IronSoftware.OldPhonePad
             char poundSymbol = '#';
             int poundSymbolCount = input.Count(c => c == poundSymbol);
             if (poundSymbolCount >= 2)
-                throw new ArgumentException("Input cannot be processed due to existence of multiple '#' symbol chars", nameof(input));
+                throw new ArgumentException("Input cannot be processed due to existence of multiple '" + poundSymbol + "' symbol chars", nameof(input));
             if (poundSymbolCount == 0)
-                throw new ArgumentException("Input cannot be processed due to '#' symbol char not found", nameof(input));
+                throw new ArgumentException("Input cannot be processed due to '" + poundSymbol + "' symbol char not found", nameof(input));
             if (input.IndexOf(poundSymbol) != input.Length - 1)
-                throw new ArgumentException("Input cannot be processed due to '#' symbol char not properly placed at end of input", nameof(input));
+                throw new ArgumentException("Input cannot be processed due to '" + poundSymbol + "' symbol char not properly placed at end of input", nameof(input));
         }
     }
 }
