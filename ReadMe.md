@@ -79,6 +79,23 @@ The input must follow specific rules to pass validation logic within the class m
 3) The input may contain a ' ' (space) between each character as a pause indication to proceed with character selection.
 4) The '*' character may be specified to erase a previously typed character.
 
+#### Mapping
+
+Each number on the keypad of an Old Phone Keypad may be pressed X number of times to select a character. Please review the below mapping to understanding that 2 pressed one time is 'A' and 2 pressed three times is 'C'. Note that a single button is dedicated to typing a space, erasing the previous inputted character, and sending / entering as (0, '*', and '#') respectively.
+
+1) `& - ' - (`
+2) `A - B - C`
+3) `D - E - F`
+4) `G - H - I`
+5) `J - K - L`
+6) `M - N - O`
+7) `P - Q - R - S`
+8) `T - U - V`
+9) `W - X - Y - Z`
+0) ` `
+*) <Erase>
+#) <Send/Enter>
+
 #### Example Input / Outputs
 
 | Input | Output |
