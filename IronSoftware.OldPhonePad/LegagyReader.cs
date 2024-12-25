@@ -2,10 +2,21 @@
 
 namespace IronSoftware.OldPhonePad
 {
+    /// <summary>
+    /// A Legacy Reader class.
+    /// </summary>
+    /// <remarks>
+    /// This class exposes the public static method OldPhonePad used to process old phone data input strings.
+    /// </remarks>
     public class LegacyReader
     {
         private static String LEGAL_INPUT_CHARS = " 0123456789*#";
 
+        /// <summary>
+        /// Accepts a single input param as a pre-formatted old phone pad data string.
+        /// </summary>
+        /// <param name="input">A pre-formatted data value ending with an '#' as a String.</param>
+        /// <returns>Old phone pad data transformed into UPPERCASE ASCII text as a String.</returns>
         public static String OldPhonePad(string input)
         {
             ValidateInputIsNotEmpty(input);
