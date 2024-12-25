@@ -27,12 +27,12 @@ This Old Phone Pad Prototype processes pre-formatted data strings from Old Phone
 
 # Highlights
 
-1. The LegacyReader.cs class file is fully coverage by unit tests which are located in the 'IronSoftware.OldPhonePad.Tests' project folder. I.e. LegacyReaderTests.cs
-2. Main project folder configured to be referenced by Tests project, so that `Tests > Run All Tests` may be executed already.
-3. Both happy path and unhappy path test scenarios have been covered with unit tests.
-4. Test driven development approach was used to write failing tests first and make them pass.
-5. GitLab Actions runs the tests continuously against the pushes and pulls into the master branch.
-6. Test coverage report is produced as a build artifact for this software repository.
+1. The LegacyReader.cs class file is fully coverage by unit tests in 'IronSoftware.OldPhonePad.Tests' project.
+2. The Main project folder has been referenced by the Tests project. Try running `Tests > Run All Tests`
+3. Both happy path and unhappy path test scenarios have been covered with test cases.
+4. Test driven development (TDD) approach was used to write failing tests first and then make them pass.
+5. GitHub Actions runs the unit tests for every push / pull into the master branch.
+6. A test coverage report is produced as a build artifact for this software repository via Actions.
 
 ## Usage
 
