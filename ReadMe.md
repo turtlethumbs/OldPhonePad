@@ -83,7 +83,7 @@ The input must follow specific rules to pass validation logic within the class m
 
 ### Mapping
 
-Each number on the keypad of an old phone pad may be pressed X number of times to select a character. Please review the below mapping to understanding that 2 pressed one time is 'A' and 2 pressed three times is 'C'. Note that a single button is dedicated to typing a space, erasing the previous inputted character, and sending / entering as (0, '*', and '#') respectively.
+Each number on the keypad of an old phone pad may be pressed X number of times to select a character. Please review the below mapping to understanding that 2 pressed one time is 'A' and 2 pressed three times is 'C'. Also, 7 pressed four times is 'S'. Note that a single button is dedicated to typing a space, erasing the previous inputted character, and sending / entering as (0, '*', and '#') respectively.
 
 1) `& - ' - (`
 2) `A - B - C`
