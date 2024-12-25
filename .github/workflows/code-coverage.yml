@@ -34,9 +34,12 @@ jobs:
           COVERAGE_FILE=$(find ./IronSoftware.OldPhonePad.Tests/TestResults/ -name "coverage.cobertura.xml" -print -quit)
           echo "coverage_file=$COVERAGE_FILE" >> $GITHUB_ENV
 
-      - name: Upload code coverage results
-        uses: codecov/codecov-action@v3
-        with:
-          file: ${{ env.coverage_file }}
-          token: ${{ secrets.CODECOV_TOKEN }}
-          slug: turtlethumbs/OldPhonePad
+      - name: Install ReportGenerator
+        run: |
+          dotnet tool install --global dotnet-reportgenerator-globaltool
+          export PATH="$PATH:/root/.dotnet/tools"
+
+      - name: Generate code coverage report
+        run: |
+          reportgenerator "-reports:${{ env.coverage_file }}" "-targetdir:./CodeCoverageReport" -reporttypes:TextSummary
+          cat ./CodeCoverageReport/summary.txt
