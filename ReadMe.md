@@ -26,7 +26,7 @@ This Old Phone Pad Prototype processes pre-formatted data strings from Old Phone
 # Highlights
 
 1. The LegacyReader.cs class file is fully coverage by unit tests which are located in the 'IronSoftware.OldPhonePad.Tests' project folder. I.e. LegacyReaderTests.cs
-2. Main project folder configured to be referenced by Tests project, so that Tests > Run All Tests may be executed already.
+2. Main project folder configured to be referenced by Tests project, so that `Tests > Run All Tests` may be executed already.
 3. Both happy path and unhappy path test scenarios have been covered with unit tests.
 
 ## Usage
