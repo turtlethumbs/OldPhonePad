@@ -20,7 +20,14 @@ This Old Phone Pad Prototype processes pre-formatted data strings from Old Phone
 2. Navigate into the cloned repo and then open 'IronSoftware.OldPhonePad.sln' with MS Visual Studio 2022
 3. Expand the IronSoftware.OldPhonePad project folder.
 4. Double-click the Program.cs file to view source code of main program.
-5. Run the solution to view example usage in command line.
+5. Optionally - review the source code of OldPhonePad method within the LegacyReader.cs class file.
+6. Run the solution to view example usage in command line.
+
+# Highlights
+
+1. The LegacyReader.cs class file is fully coverage by unit tests which are located in the 'IronSoftware.OldPhonePad.Tests' project folder. I.e. LegacyReaderTests.cs
+2. Main project folder configured to be referenced by Tests project, so that Tests > Run All Tests may be executed already.
+3. Both happy path and unhappy path test scenarios have been covered with unit tests.
 
 ## Usage
 
