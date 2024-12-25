@@ -26,6 +26,7 @@ namespace IronSoftware.OldPhonePad
                 {
                     counter = 0;
                     transformedString += (prevChar != PAUSE_CHAR && prevChar != ERASE_CHAR) ? mapping[prevChar][maxCount] : "";
+                    transformedString = LegacyReader.ReplaceParenthesisChar(transformedString);
                     maxCount = counter;
                     if (nextChar == PAUSE_CHAR)
                     {
@@ -40,6 +41,31 @@ namespace IronSoftware.OldPhonePad
                     transformedString = transformedString.Substring(0, transformedString.Length - 1);
                 prevChar = nextChar;
             }
+            return transformedString;
+        }
+
+        private static string ReplaceParenthesisChar(string transformedString)
+        {
+            if (transformedString.Length <= 0) return transformedString;
+            char lastChar = transformedString[transformedString.Length - 1];
+            const char PARENTHESIS_L = '(';
+            const char PARENTHESIS_R = ')';
+            if (lastChar != PARENTHESIS_L) return transformedString;
+            transformedString = transformedString.Substring(0, transformedString.Length - 1);
+            for (int i = transformedString.Length - 1; i >= 0; i--)
+            {
+                if (transformedString[i] == PARENTHESIS_R)
+                {
+                    transformedString += PARENTHESIS_L;
+                    return transformedString;
+                }
+                if (transformedString[i] == PARENTHESIS_L)
+                {
+                    transformedString += PARENTHESIS_R;
+                    return transformedString;
+                }   
+            }
+            transformedString += PARENTHESIS_L;
             return transformedString;
         }
 
