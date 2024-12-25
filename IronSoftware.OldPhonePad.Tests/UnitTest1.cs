@@ -39,5 +39,15 @@ namespace IronSoftware.OldPhonePad.Tests
 
             Assert.Equal(expectResult, exception.Message);
         }
+
+        [Fact]
+        public void LegacyReader_OldPhonePad_ReturnExceptionDueToInvalidCharInputted()
+        {
+            string expectResult = "Input cannot be processed due to illegal char (Parameter 'input')";
+
+            var exception = Assert.Throws<ArgumentException>(() => LegacyReader.OldPhonePad("A"));
+
+            Assert.Equal(expectResult, exception.Message);
+        }
     }
 }
