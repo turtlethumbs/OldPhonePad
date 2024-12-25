@@ -60,17 +60,19 @@ class Program
 
 ```
 
-## Data Format
-
-### Method - OldPhonePad
+## Method - OldPhonePad
 
 `string LegacyReader.OldPhonePad(string input)`
 
-#### Params
+### Input Params
 
 `input` as a String 
 
-#### Format
+### Output
+
+This method's output is in UPPERCASE ASCII text format.
+
+### Format
 
 The input must follow specific rules to pass validation logic within the class method.
 
@@ -79,7 +81,7 @@ The input must follow specific rules to pass validation logic within the class m
 3) The input may contain a ' ' (space) between each character as a pause indication to proceed with character selection.
 4) The '*' character may be specified to erase a previously typed character.
 
-#### Mapping
+### Mapping
 
 Each number on the keypad of an old phone pad may be pressed X number of times to select a character. Please review the below mapping to understanding that 2 pressed one time is 'A' and 2 pressed three times is 'C'. Note that a single button is dedicated to typing a space, erasing the previous inputted character, and sending / entering as (0, '*', and '#') respectively.
 
@@ -98,7 +100,7 @@ Each number on the keypad of an old phone pad may be pressed X number of times t
 
 **Note:** ' ' characters in the input data are treated as 1 second pauses that confirm the user's most recent previous selection.
 
-#### Example Input / Outputs
+### Example Input / Outputs
 
 | Input | Output |
 |-------|--------|
@@ -109,9 +111,5 @@ Each number on the keypad of an old phone pad may be pressed X number of times t
 | 62 22212224433 33777733# | MAC&CHEESE |
 | 11184426655111011199966688111# | (THANK) (YOU) |
 | 111*84426655111011199966688111# | THANK( )YOU( |
-
-### Output
-
-This method's output is in UPPERCASE ASCII text format.
 
 ## Finished.
