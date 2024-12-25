@@ -42,4 +42,4 @@ jobs:
       - name: Generate code coverage report
         run: |
           reportgenerator "-reports:${{ env.coverage_file }}" "-targetdir:./CodeCoverageReport" -reporttypes:TextSummary
-          cat ./CodeCoverageReport/summary.txt
+          cat ./CodeCoverageReport/Summary.txt
