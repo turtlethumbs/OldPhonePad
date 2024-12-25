@@ -76,7 +76,7 @@ This method's output is in UPPERCASE ASCII text format.
 
 The input must follow specific rules to pass validation logic within the class method.
 
-1) The input may consist of only the following chracters '0123456789*#' and black space ' '. 
+1) The input may consist of only the following chracters '0123456789*#' and blank spaces ' '
 2) The input must always be terminated with a '#' character that only appears once.
 3) The input may contain a ' ' (space) between each character as a pause indication to proceed with character selection.
 4) The '*' character may be specified to erase a previously typed character.
