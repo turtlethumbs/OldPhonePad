@@ -42,3 +42,9 @@ jobs:
       - name: Generate code coverage HTML report
         run: |
           reportgenerator "-reports:${{ env.coverage_file }}" "-targetdir:./CodeCoverageReport" -reporttypes:Html
+
+      - name: Upload code coverage HTML report
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-coverage-report
+          path: ./CodeCoverageReport/index.html
