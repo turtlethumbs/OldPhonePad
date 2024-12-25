@@ -1,6 +1,6 @@
 # Old Phone Pad Prototype
 
-This Old Phone Pad Prototype processes pre-formatted data strings from Old Phone Pad input devices.
+This Old Phone Pad Prototype processes pre-formatted data strings from old phone pad devices.
 
 ## Features
 
