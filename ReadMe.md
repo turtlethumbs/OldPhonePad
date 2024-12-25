@@ -28,6 +28,9 @@ This Old Phone Pad Prototype processes pre-formatted data strings from Old Phone
 1. The LegacyReader.cs class file is fully coverage by unit tests which are located in the 'IronSoftware.OldPhonePad.Tests' project folder. I.e. LegacyReaderTests.cs
 2. Main project folder configured to be referenced by Tests project, so that `Tests > Run All Tests` may be executed already.
 3. Both happy path and unhappy path test scenarios have been covered with unit tests.
+4. Test driven development approach was used to write failing tests first and make them pass.
+5. GitLab Actions runs the tests continuously against the pushes and pulls into the master branch.
+6. Test coverage report is produced as a build artifact for this software repository.
 
 ## Usage
 
@@ -67,7 +70,7 @@ input as a String
 
 #### Format
 
-The input must follow specific rules to pass validation logic with the class method.
+The input must follow specific rules to pass validation logic within the class method.
 
 1) The input may consist of only the following chracters '0123456789*#' and black space ' '. 
 2) The input must always be terminated with a '#' character that only appears once.
