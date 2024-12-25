@@ -8,9 +8,9 @@ namespace IronSoftware.OldPhonePad
 
         public static String OldPhonePad(string input)
         {
-            LegacyReader.ValidateInputIsNotEmpty(input);
-            LegacyReader.ValidateInputHasLegalCharsOnly(input);
-            LegacyReader.ValidateInputHasPoundSymbolAsFinalChar(input);
+            ValidateInputIsNotEmpty(input);
+            ValidateInputHasLegalCharsOnly(input);
+            ValidateInputHasPoundSymbolAsFinalChar(input);
             Dictionary<char, string> mapping = CreateKeypadMapping();
             int counter = -1;
             int maxCount = counter;
@@ -26,7 +26,7 @@ namespace IronSoftware.OldPhonePad
                 {
                     counter = 0;
                     transformedString += (prevChar != PAUSE_CHAR && prevChar != ERASE_CHAR) ? mapping[prevChar][maxCount] : "";
-                    transformedString = LegacyReader.ReplaceParenthesisChar(transformedString);
+                    transformedString = ReplaceParenthesisChar(transformedString);
                     maxCount = counter;
                     if (nextChar == PAUSE_CHAR)
                     {
