@@ -2,6 +2,14 @@
 
 This Old Phone Pad Prototype processes pre-formatted data strings from Old Phone Pad input devices.
 
+## Features
+
+- Transforms pre-formatted old phone pad data strings into human readable ASCII text strings.
+- Input validation raises catchable exceptions for blank, null, or malformed input data.
+- Auto-replaces subsequently found '(' characters with ')' to mimic parenthesis closing behavior.
+- Replays erase button presses as specified in the input as the '*' character to remove previous character.
+- Explicit line endings by strict requirement to specify a '#' character at the end of each line.
+
 ## Requirments
 
 .NET 8.0 or higher (MS Visual Studio 2022)
@@ -38,3 +46,6 @@ class Program
 
 ```
 
+## Data Format
+
+- 
